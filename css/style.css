@@ -850,13 +850,13 @@ fieldset{
 	color:#fff;
 }
 
-#response{
+#mce-success-response{
 	color:#fff;
     display: block;
    /*  height: 40px; */
 }
 
-#signup .form-control{
+#mc-embedded-subscribe-form .form-control{
 	background:#fff;
 	padding:0px 0px 0px 26px;
 	height: 65px;
@@ -868,7 +868,7 @@ fieldset{
 	margin-top:0px;
 }
 
-#signup .button{
+#mc-embedded-subscribe-form .button{
 	color:#f1f1f1;
 	height: 65px;
 	border:0;
@@ -883,19 +883,19 @@ fieldset{
 	padding:0;
 }
 
-#signup .form-control:-moz-placeholder {
+#mc-embedded-subscribe-form .form-control:-moz-placeholder {
   color: #123241;
 }
 
-#signup .form-control::-moz-placeholder {
+#mc-embedded-subscribe-form .form-control::-moz-placeholder {
   color: #123241;
 }
 
-#signup .form-control:-ms-input-placeholder {
+#mc-embedded-subscribe-form .form-control:-ms-input-placeholder {
   color: #123241;
 }
 
-#signup .form-control::-webkit-input-placeholder {
+#mc-embedded-subscribe-form .form-control::-webkit-input-placeholder {
   color: #123241;
 }
 
@@ -1292,11 +1292,11 @@ textarea.form-control{
 		margin-right: 0px;
 	}	
 
-	#signup .form-control{
+	#mc-embedded-subscribe-form .form-control{
 		float:none;
 	}
 
-	#signup .button{
+	#mc-embedded-subscribe-form .button{
 		float:none;
 		width:80%;
 	}
