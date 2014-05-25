@@ -28,9 +28,7 @@ Page hosted by [github pages](https://help.github.com/articles/setting-up-a-cust
 
 Because the chosen template loads a MST of JavaScript and CSS, gulp is used to minify and concatonate as many files as possible, bringing the number of requests on each page load down from ~30 (!) to ~4 (depending on if the client is IE).
 
-####Installing gulp
-
-See the gulp documentation here:  
+####Installing gulp  
 
 Run 
 ```
@@ -41,6 +39,8 @@ to get gulp, the gulp modules we are using and all of their dependencies.
 From there you can run `$ gulp watch` and gulp will automatically rebuild the site on changes to any html, css or js file in `src/`. 
 
 Run `$ gulp` to manually rebuild the site at any time.
+
+See the [gulp API documentation](https://github.com/gulpjs/gulp/blob/master/docs/API.md) for more info.
 
 ####Architecture
 
