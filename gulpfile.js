@@ -9,11 +9,12 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-minify-html'),
     minifyCSS = require('gulp-minify-css'),
     plumber = require('gulp-plumber'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    colog = require('colog');
+
 
 
 gulp.task('scripts', function(){
-
 
     gulp.src([
             'src/lib/3DGridEffect/js/modernizr.custom.js',
@@ -22,6 +23,7 @@ gulp.task('scripts', function(){
             ])
         .pipe(uglify())
         .pipe(gulp.dest('./build/js'));
+
 
     //  The horror.
     var output = gulp.src([
@@ -54,6 +56,7 @@ gulp.task('scripts', function(){
 });
 
 
+
 gulp.task('styles', function(){
 
     gulp.src('src/lib/magnific-popup/dist/magnific-popup.css')
@@ -78,6 +81,7 @@ gulp.task('styles', function(){
 });
 
 
+
 gulp.task('markup', function(){
 
     //Generate minified html for ajax loaded stories
@@ -96,6 +100,7 @@ gulp.task('markup', function(){
 });
 
 
+
 /* Make embedded resources available for tightly-coupled template bs */
 gulp.task('fonts', function(){
   gulp.src('src/lib/font-awesome/fonts/*')
@@ -106,6 +111,25 @@ gulp.task('lib-images', function(){
   gulp.src('src/lib/3DGridEffect/img/*')
     .pipe(gulp.dest('./build/img'));
 })
+
+
+gulp.task('watch', function(){
+
+    gulp.watch('./src/**/*', function(event){
+        var pathArr = event.path.split("/"), size = pathArr.length;
+        var fileName = pathArr[size-2] + "/" + pathArr[size-1];
+        var fileExt = fileName.split(".")[fileName.split(".").length -1];
+
+        colog.log("\n========\nFile: " + colog.color(fileName, 'green') + " was " + colog.color(event.type, 'red') + ".\n========");
+
+        if(fileExt.match(/js/)){ gulp.start('scripts'); return;}
+        if(fileExt.match(/css/)){ gulp.start('styles'); return;}
+        if(fileExt.match(/html/)){ gulp.start('markup'); return;}
+
+        gulp.run('default');
+    });
+});
+
 
 
 gulp.task('default', ['scripts', 'styles', 'markup', 'fonts', 'lib-images']);
