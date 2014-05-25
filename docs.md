@@ -26,7 +26,7 @@ Page hosted by [github pages](https://help.github.com/articles/setting-up-a-cust
 
 ### Getting the build system set up
 
-Because the chosen template loads a MST of JavaScript and CSS, gulp is used to minify and concatonate as many files as possible, bringing the number of requests on each page load down from ~30 (!) to ~4 (depending on if the client is IE).
+Because the chosen template loads a MST of JavaScript and CSS, gulp is used to minify and concatenate as many files as possible, bringing the number of requests on each page load down from ~30 (!) to ~4 (depending on if the client is IE).
 
 ####Installing gulp  
 
