@@ -1337,3 +1337,20 @@ textarea.form-control{
     width: 100%;
     height: 100%;
 }
+
+/* Hacks and One-offs */
+#mission-text {
+    margin-top: -2%;
+    margin-bottom: 2.5%;
+}
+
+#donate a{
+    color: #ddd;
+    text-decoration: underline;
+}
+
+#myTab a{
+    text-decoration: none;
+}
+
+

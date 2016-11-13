@@ -85,7 +85,7 @@ gulp.task('styles', function(){
 gulp.task('markup', function(){
 
     //Generate minified html for ajax loaded stories
-    ['javeria.html', 'shaloom.html', 'sobia.html'].forEach(function(sourcePage){
+    ['goldenhour.html', 'marginalized.html', 'edu150.html'].forEach(function(sourcePage){
 
         gulp.src("src/"+sourcePage)
             .pipe(minifyHTML())
